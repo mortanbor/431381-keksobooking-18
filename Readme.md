@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
-* Студент: [Татьяна  Морозова](https://up.htmlacademy.ru/javascript/18/user/431381).
-* Наставник: `Неизвестно`.
+* Студент: [Татьяна  Морозова](https://up.htmlacademy.ru/javascript/17/user/431381).
+* Наставник: [Алексей Балесный](https://htmlacademy.ru/profile/id221665).
 
 ---
 
@@ -48,5 +48,5 @@ git clone SSH-адрес_вашего_форка
 
 Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный JavaScript](https://htmlacademy.ru/intensive/javascript)», уровень 1 от [HTML Academy](https://htmlacademy.ru).
 
-[travis-image]: https://travis-ci.com/htmlacademy-javascript/431381-keksobooking-18.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-javascript/431381-keksobooking-18
+[travis-image]: https://travis-ci.com/htmlacademy-javascript/431381-keksobooking-17.svg?branch=master
+[travis-url]: https://travis-ci.com/htmlacademy-javascript/431381-keksobooking-17
