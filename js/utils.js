@@ -54,7 +54,7 @@
   };
 
   // обработчик на Esc
-  var addEscListener = function(callback) {
+  var addEscListener = function (callback) {
     window.addEventListener('keydown', function (evt) {
       if (evt.keyCode === window.data.CLOSE_KEY_CODE) {
         callback();
@@ -66,12 +66,12 @@
   var debounce = function (cb) {
     var lastTimeout = null;
 
-    return function() {
+    return function () {
       var parameters = arguments;
       if (lastTimeout) {
         window.clearTimeout(lastTimeout);
       }
-      lastTimeout = window.setTimeout(function() {
+      lastTimeout = window.setTimeout(function () {
         cb.apply(null, parameters);
       }, window.data.DEBOUNCE_INTERVAL);
     };
