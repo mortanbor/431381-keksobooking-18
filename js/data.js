@@ -42,7 +42,7 @@
       middle: 10000,
       high: 50000
     },
-    FEATURES: ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'],
+    FEATURES: [ "wifi", "dishwasher", "parking", "washer", "elevator", "conditioner" ],
     CURRENCY_PER_NIGHT: '₽/ночь',
     TEMPLATE_CAPACITY: '{{rooms}} комнаты для {{guests}} гостей',
     TEMPLATE_CHECK: 'Заезд после {{checkin}}, выезд до {{checkout}}',

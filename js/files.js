@@ -12,7 +12,7 @@
     var fileName = file.name.toLowerCase();
 
     var matches = window.data.FILE_TYPES.some(function (it) {
-      return fileName.endsWith(it);
+     return fileName.endsWith(it);
     });
 
     if (matches) {
@@ -54,7 +54,7 @@
   });
 
   window.files = {
-    setDefaults: function () {
+    setDefaults: function() {
       avatarImg.src = defaultAvatar;
 
       var photoBlocks = photoContainer.querySelectorAll('.ad-form__photo');
@@ -63,5 +63,5 @@
       }
       photoContainer.appendChild(photoPlace);
     }
-  };
+  }
 })();
