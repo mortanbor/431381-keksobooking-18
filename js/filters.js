@@ -11,7 +11,7 @@
   var featuresNodes = filters.querySelectorAll('.map__checkbox');
   var filteredData = [];
 
-  var applyFilter = function(node, key) {
+  var applyFilter = function (node, key) {
     if (node.value !== 'any') {
       filteredData = filteredData.filter(function (item) {
         return item.offer[key].toString() === node.value;
@@ -48,7 +48,7 @@
         var features = item.offer.features;
 
         if (features.length > 0) {
-          for (var i = 0; i < featuresValues.length; i++) {
+          for (i = 0; i < featuresValues.length; i++) {
             // если какой-то фичи из выбранных нет в объявлении, оно не подходит
             if (features.indexOf(featuresValues[i]) === -1) {
               return false;
