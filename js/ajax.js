@@ -4,7 +4,6 @@
   var errorTemplate = document.querySelector('#error').content.querySelector('.error');
   var errorBlock = errorTemplate.cloneNode(true);
   var errorStatusBlock = errorBlock.querySelector('.error__message');
-  var errorBlockCloser = errorBlock.querySelector('.error__button');
   var successHandler = null;
   var xhr = new XMLHttpRequest();
 

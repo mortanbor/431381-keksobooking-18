@@ -58,10 +58,6 @@
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
-}
-
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -194,6 +190,7 @@ fieldset {
   margin: auto;
 
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .map__pin:not(.map__pin--main)::after {
@@ -1247,4 +1244,8 @@ fieldset {
 .error__button:active {
   outline: none;
   opacity: 0.6;
+}
+
+.hidden {
+  display: none;
 }
