@@ -46,18 +46,19 @@
     if (featuresValues.length) {
       filteredData = filteredData.filter(function (item) {
         var features = item.offer.features;
+        var isRelevant = true;
 
         if (features.length > 0) {
           featuresValues.forEach(function (el) {
             // если какой-то фичи из выбранных нет в объявлении, оно не подходит
             if (features.indexOf(el) === -1) {
-              return false;
+              isRelevant = false;
             }
           });
         } else {
-          return false;
+          isRelevant = false;
         }
-        return true;
+        return isRelevant;
       });
     }
 
