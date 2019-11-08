@@ -31,7 +31,11 @@
     PIN_WIDTH: 40,
     PIN_HEIGHT: 44,
     MAIN_PIN_WIDTH: 65,
+    MAIN_PIN_HALF_SIZE: 32.5,
     MAIN_PIN_HEIGHT: 65,
+    RES_TIMEOUT: 10000, // таймаут XHR 10s
+    RES_SUCCESS_CODE: 200, // код успешного ответа сервера
+    RESTORE_ADDRESS_TIMEOUT: 0, // таймаут возврата исходного адреса при деактивации
     ROOMS_TO_GUESTS: {
       '1': [1],
       '2': [1, 2],

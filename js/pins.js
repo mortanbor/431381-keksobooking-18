@@ -1,9 +1,6 @@
 'use strict';
 
 (function () {
-  var widthPinHalf = window.data.PIN_WIDTH / 2;
-  var heightPinHalf = window.data.PIN_HEIGHT / 2;
-
   // формируем шаблон для копирования
   // первая строка - это то, куда будем копировать
   // вторая строка - откуда берём шаблон для копирования
@@ -17,8 +14,8 @@
 
     imgPin.src = pin.author.avatar;
     imgPin.alt = pin.offer.type;
-    pinElement.style.left = (pin.location.x - widthPinHalf) + 'px';
-    pinElement.style.top = (pin.location.y - heightPinHalf) + 'px';
+    pinElement.style.left = (pin.location.x - window.data.MAIN_PIN_HALF_SIZE) + 'px';
+    pinElement.style.top = (pin.location.y - window.data.MAIN_PIN_HALF_SIZE) + 'px';
     return pinElement;
   };
 

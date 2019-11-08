@@ -2,7 +2,7 @@
 
 (function () {
 
-  var deactivate = function () {
+  var successClickHandler = function () {
     window.form.successPostBlock.classList.add('hidden');
     window.pins.similarListElement.innerHTML = '';
     window.cards.removeCard();
@@ -19,20 +19,20 @@
     window.pins.data = [];
     setTimeout(function () {
       window.form.fieldAddress.value = window.data.startAddress;
-    }, 0);
+    }, window.data.RESTORE_ADDRESS_TIMEOUT);
   };
 
   var successKeyCloseHandler = function (evt) {
     if (window.data.isActive && evt.keyCode === window.data.CLOSE_KEY_CODE) {
-      deactivate();
+      successClickHandler();
       window.removeEventListener('keydown', successKeyCloseHandler);
     }
   };
 
-  window.form.successPostBlock.addEventListener('click', deactivate);
+  window.form.successPostBlock.addEventListener('click', successClickHandler);
 
   window.deactivate = {
-    do: deactivate,
+    do: successClickHandler,
     successCloseHandler: successKeyCloseHandler
   };
 })();

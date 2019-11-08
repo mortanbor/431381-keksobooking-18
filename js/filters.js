@@ -37,23 +37,23 @@
     applyFilter(roomsNode, 'rooms');
     applyFilter(guestsNode, 'guests');
 
-    for (var i = 0; i < featuresNodes.length; i++) {
-      if (featuresNodes[i].checked) {
-        featuresValues.push(featuresNodes[i].value);
+    Array.from(featuresNodes).forEach(function (el) {
+      if (el.checked) {
+        featuresValues.push(el.value);
       }
-    }
+    });
 
     if (featuresValues.length) {
       filteredData = filteredData.filter(function (item) {
         var features = item.offer.features;
 
         if (features.length > 0) {
-          for (i = 0; i < featuresValues.length; i++) {
+          featuresValues.forEach(function (el) {
             // если какой-то фичи из выбранных нет в объявлении, оно не подходит
-            if (features.indexOf(featuresValues[i]) === -1) {
+            if (features.indexOf(el) === -1) {
               return false;
             }
-          }
+          });
         } else {
           return false;
         }
@@ -70,8 +70,9 @@
   priceNode.addEventListener('change', filtersHandler);
   roomsNode.addEventListener('change', filtersHandler);
   guestsNode.addEventListener('change', filtersHandler);
-  for (var i = 0; i < featuresNodes.length; i++) {
+
+  Array.from(featuresNodes).forEach(function (el) {
     // в отличие от селектов, тут возможен дребезг, поэтому только тут есть смысл устранять
-    featuresNodes[i].addEventListener('change', window.utils.debounce(filtersHandler));
-  }
+    el.addEventListener('change', window.utils.debounce(filtersHandler));
+  });
 })();

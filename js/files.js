@@ -48,9 +48,9 @@
       photoPlace.remove();
     }
 
-    for (var i = 0; i < photosChooser.files.length; i++) {
-      loadImage(photosChooser.files[i], loadPhotoHandler);
-    }
+    Array.from(photosChooser.files).forEach(function (el) {
+      loadImage(el, loadPhotoHandler);
+    });
   });
 
   window.files = {
@@ -58,9 +58,10 @@
       avatarImg.src = defaultAvatar;
 
       var photoBlocks = photoContainer.querySelectorAll('.ad-form__photo');
-      for (var i = 0; i < photoBlocks.length; i++) {
-        photoBlocks[i].remove();
-      }
+
+      Array.from(photoBlocks).forEach(function (el) {
+        el.remove();
+      });
       photoContainer.appendChild(photoPlace);
     }
   };

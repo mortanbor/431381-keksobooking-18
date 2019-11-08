@@ -4,9 +4,8 @@
   var mainPin = window.map.node.querySelector('.map__pin--main');
   var minMainPinY = window.data.MIN_MAP_Y - window.data.MAIN_PIN_HEIGHT;
   var maxMainPinY = window.data.MAX_MAP_Y - window.data.MAIN_PIN_HEIGHT;
-  var offsetMainPinHalf = window.data.MAIN_PIN_WIDTH / -2;
-  var minMainPinX = offsetMainPinHalf;
-  var maxMainPinX = window.map.width + offsetMainPinHalf;
+  var minMainPinX = -window.data.MAIN_PIN_HALF_SIZE;
+  var maxMainPinX = window.map.width - window.data.MAIN_PIN_HALF_SIZE;
   var startTop = mainPin.style.top;
   var startLeft = mainPin.style.left;
 

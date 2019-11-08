@@ -22,14 +22,14 @@
   };
 
   xhr.responseType = 'json';
-  xhr.timeout = 10000; // 10s
+  xhr.timeout = window.data.RES_TIMEOUT;
 
   errorBlock.addEventListener('click', errorCloseHandler);
 
   window.utils.addEscListener(errorCloseHandler);
 
   xhr.addEventListener('load', function () {
-    if (xhr.status === 200) {
+    if (xhr.status === window.data.RES_SUCCESS_CODE) {
       successHandler(xhr.response);
     } else {
       errorHandler('Cтатус ответа: ' + xhr.status + ' ' + xhr.statusText);

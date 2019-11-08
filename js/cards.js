@@ -81,20 +81,21 @@
   };
 
   var removeCard = function () {
-    popupClose.removeEventListener('click', hideCard);
+    popupClose.removeEventListener('click', closerClickHandler);
     cardTemplateElement.remove();
   };
 
   var hideCard = function () {
     cardTemplateElement.classList.add('hidden');
   };
+  var closerClickHandler = hideCard;
 
   var initCard = function () {
     hideCard();
     window.map.filtersContainer.insertAdjacentElement('beforebegin', cardTemplateElement);
   };
 
-  popupClose.addEventListener('click', hideCard);
+  popupClose.addEventListener('click', closerClickHandler);
 
   window.utils.addEscListener(function () {
     hideCard();
